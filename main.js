@@ -1,6 +1,9 @@
 const numeroSenha = document.querySelector(".parametro-senha__texto")
 const campoSenha =  document.querySelector("#campo-senha")
 
+const forcaSenha = document.querySelector(".forca")
+
+
 campoSenha.value = "Aqui vai aparecer a senha."
 // OPEN IN WEBVIEW
 let letrasMaiusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -17,11 +20,9 @@ for(let i = 0; i <  checkbox.lenght; i++){
 }
 
 // checkbox[0] = maiusculas 
-// checkbox[1] =
-// checkbox[2] =
-// checkbox[3] =
-
-
+// checkbox[1] = minusculas
+// checkbox[2] = numeros
+// checkbox[3] = símbolos
 
 
 const botoes = document.querySelectorAll(".parametro-senha__botao")
@@ -52,4 +53,16 @@ function gerasenha(){
             senha = senha + let letrasMaiusculas[numeroAleatório]
         }
         campoSenha.value = senha;
+        classificarSenha()
+}
+
+
+// Função para classificar a senha
+function classificarSenha(){
+   
+   if(tamanhoSenha > 11){
+
+   }
+        forcaSenha.classList.add('media')
+ 
 }
